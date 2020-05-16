@@ -16,7 +16,7 @@
 <meta property="og:description" content="C语言那些关于时间的程序获取当前系统时间用途一·需要对获取的当前的日期做出一些运算，不仅仅是输出显示。 1234567891011121314151617#include&lt;stdio.h&gt;#include&lt;time.h&gt;int main()&amp;#123;	int day,month,year,days;	time_t timep;	struct tm *p;	time (&amp;a">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-16T03:00:36.000Z">
-<meta property="article:modified_time" content="2020-05-16T03:58:05.172Z">
+<meta property="article:modified_time" content="2020-05-16T04:06:32.557Z">
 <meta property="article:author" content="QiYao Shn">
 <meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary">
@@ -181,11 +181,11 @@
 <h3 id="用途二"><a href="#用途二" class="headerlink" title="用途二"></a>用途二</h3><p><strong>·</strong>仅仅只是输出显示当前系统时间，并且希望代码看上去简洁一点。</p>
 <p><strong>·</strong>希望自定义输出的系统时间的格式，比如用于命名文件会很方便。(每新建一个文件都能从文件名看到建立文件的日期，是不是很酷！)这个时间的输出格式很多，可参考这个博客，输出自己想要的格式。</p>
 <p><a href="https://blog.csdn.net/weixin_34419321/article/details/89398411" target="_blank" rel="noopener">输出时间的格式</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;time.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">	char name[100]&#x3D;&#123;0&#125;;</span><br><span class="line">	time_t timep;</span><br><span class="line">	time(&amp;timep);</span><br><span class="line">	strftime(name,sizeof(name),&quot;%B.%d.%Y %H-%M-%S.txt&quot;,localtime(&amp;timep));</span><br><span class="line">	printf(&quot;%s&quot;,name);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;time.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">	char name[100]&#x3D;&#123;0&#125;;</span><br><span class="line">	time_t timep;</span><br><span class="line">	time(&amp;timep);</span><br><span class="line">	strftime(name,sizeof(name),</span><br><span class="line">	&quot;%B.%d.%Y %H-%M-%S.txt&quot;,localtime(&amp;timep));</span><br><span class="line">	printf(&quot;%s&quot;,name);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>·</strong>值得注意的地方：用来存时间的字符数组(也可以说是字符串)一定要足够大能放下这个时间字符串。</p>
 <h3 id="小贴士"><a href="#小贴士" class="headerlink" title="小贴士"></a>小贴士</h3><p><strong>·</strong>如果你不仅仅想要只是输出年月日等等的这些时间，可以参考下面这个网址。</p>
-<p>[百度一下]( [<a href="https://baike.baidu.com/item/struct%20tm/3589199?fr=aladdin]" target="_blank" rel="noopener">https://baike.baidu.com/item/struct%20tm/3589199?fr=aladdin]</a>(<a href="https://baike.baidu.com/item/struct" target="_blank" rel="noopener">https://baike.baidu.com/item/struct</a> tm/3589199?fr=aladdin) )</p>
+<p>[百度struct tm](<a href="https://baike.baidu.com/item/struct" target="_blank" rel="noopener">https://baike.baidu.com/item/struct</a> tm/3589199?fr=aladdin) </p>
 <p><strong>·</strong>C语言的stdio库里定义过tm的结构体，所以不要疑惑<strong>用途一</strong>里面为什么没有定义过tm的结构体，还可以用它来定义p这个结构体指针？？其实它藏在stdio库里，直接使用就可以了。这个做过C语言项目.dev的同学很容易就能理解了(我用的dev的编译器)，我们经常来自定义.h，直接一个#include “·····.h”就可以在主程序里用.h里面定义好的东西了。</p>
 <h2 id="程序计时"><a href="#程序计时" class="headerlink" title="程序计时"></a>程序计时</h2><p><strong>·</strong>想要为自己设计的程序计时吗，只需要简单的几句话就可以了。</p>
 <p><strong>·</strong>值得注意的地方：有时我们的程序太过于简单导致运行时间过短，短到电脑没办法捕捉到，这时只需要一个循环让它多跑几次，把最后得到的时间除以循环次数就可以了。</p>
