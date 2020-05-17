@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>c语言获取当前系统时间的不同用法 | QiYao Shn&#39;s blog</title>
+  <title>Category: html | QiYao Shn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="C语言那些关于时间的程序获取当前系统时间用途一·需要对获取的当前的日期做出一些运算，不仅仅是输出显示。 1234567891011121314151617#include&lt;stdio.h&gt;#include&lt;time.h&gt;int main()&amp;#123;	int day,month,year,days;	time_t timep;	struct tm *p;	time (&amp;a">
-<meta property="og:type" content="article">
-<meta property="og:title" content="c语言获取当前系统时间的不同用法">
-<meta property="og:url" content="http://yoursite.com/2020/05/16/c%E8%AF%AD%E8%A8%80%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="QiYao Shn&#39;s blog">
+<meta property="og:url" content="http://yoursite.com/categories/html/index.html">
 <meta property="og:site_name" content="QiYao Shn&#39;s blog">
-<meta property="og:description" content="C语言那些关于时间的程序获取当前系统时间用途一·需要对获取的当前的日期做出一些运算，不仅仅是输出显示。 1234567891011121314151617#include&lt;stdio.h&gt;#include&lt;time.h&gt;int main()&amp;#123;	int day,month,year,days;	time_t timep;	struct tm *p;	time (&amp;a">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-16T03:00:36.000Z">
-<meta property="article:modified_time" content="2020-05-16T04:31:42.023Z">
 <meta property="article:author" content="QiYao Shn">
-<meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="QiYao Shn&#39;s blog" type="application/atom+xml">
@@ -155,203 +150,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-c语言获取当前系统时间" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      c语言获取当前系统时间的不同用法
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/17/sublime%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90html%E9%AA%A8%E6%9E%B6/" class="archive-article-date">
+  	<time datetime="2020-05-17T11:02:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/05/17/sublime%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90html%E9%AA%A8%E6%9E%B6/">sublime快速生成html骨架</a>
     </h1>
   
 
-        
-        <a href="/2020/05/16/c%E8%AF%AD%E8%A8%80%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4/" class="archive-article-date">
-  	<time datetime="2020-05-16T03:00:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="C语言那些关于时间的程序"><a href="#C语言那些关于时间的程序" class="headerlink" title="C语言那些关于时间的程序"></a>C语言那些关于时间的程序</h1><h2 id="获取当前系统时间"><a href="#获取当前系统时间" class="headerlink" title="获取当前系统时间"></a>获取当前系统时间</h2><h3 id="用途一"><a href="#用途一" class="headerlink" title="用途一"></a>用途一</h3><p><strong>·</strong>需要对获取的当前的日期做出一些运算，不仅仅是输出显示。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> day,month,year,days;</span><br><span class="line">	<span class="keyword">time_t</span> timep;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">tm</span> *<span class="title">p</span>;</span></span><br><span class="line">	time (&amp;timep);</span><br><span class="line">	</span><br><span class="line">	p=localtime(&amp;timep);</span><br><span class="line">	day=(p-&gt;tm_mday);			<span class="comment">//当前月份日数</span></span><br><span class="line">	month=(<span class="number">1</span>+p-&gt;tm_mon);		<span class="comment">//当前月份</span></span><br><span class="line">	year=(<span class="number">1900</span>+p-&gt;tm_year);		<span class="comment">//当前年份</span></span><br><span class="line">	days=(p-&gt;tm_yday);			<span class="comment">//从今年1月1日算起至今的天数</span></span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d-%d-%d %d"</span>,year,month,day,days);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="用途二"><a href="#用途二" class="headerlink" title="用途二"></a>用途二</h3><p><strong>·</strong>仅仅只是输出显示当前系统时间，并且希望代码看上去简洁一点。</p>
-<p><strong>·</strong>希望自定义输出的系统时间的格式，比如用于命名文件会很方便。(每新建一个文件都能从文件名看到建立文件的日期，是不是很酷！)这个时间的输出格式很多，可参考这个博客，输出自己想要的格式。</p>
-<p><a href="https://blog.csdn.net/weixin_34419321/article/details/89398411" target="_blank" rel="noopener">输出时间的格式</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;time.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">	char name[100]&#x3D;&#123;0&#125;;</span><br><span class="line">	time_t timep;</span><br><span class="line">	time(&amp;timep);</span><br><span class="line">	strftime(name,sizeof(name),</span><br><span class="line">	&quot;%B.%d.%Y %H-%M-%S.txt&quot;,localtime(&amp;timep));</span><br><span class="line">	printf(&quot;%s&quot;,name);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>·</strong>值得注意的地方：用来存时间的字符数组(也可以说是字符串)一定要足够大能放下这个时间字符串。</p>
-<h3 id="小贴士"><a href="#小贴士" class="headerlink" title="小贴士"></a>小贴士</h3><p><strong>·</strong>如果你不仅仅想要只是输出年月日等等的这些时间，可以参考下面这个网址。</p>
-<p>[百度struct tm](<a href="https://baike.baidu.com/item/struct" target="_blank" rel="noopener">https://baike.baidu.com/item/struct</a> tm/3589199?fr=aladdin) </p>
-<p><strong>·</strong>C语言的stdio库里定义过tm的结构体，所以不要疑惑<strong>用途一</strong>里面为什么没有定义过tm的结构体，还可以用它来定义p这个结构体指针？？其实它藏在stdio库里，直接使用就可以了。这个做过C语言项目.dev的同学很容易就能理解了(我用的dev的编译器)，我们经常来自定义.h，直接一个#include “·····.h”就可以在主程序里用.h里面定义好的东西了。</p>
-<h2 id="程序计时"><a href="#程序计时" class="headerlink" title="程序计时"></a>程序计时</h2><p><strong>·</strong>想要为自己设计的程序计时吗，只需要简单的几句话就可以了。</p>
-<p><strong>·</strong>值得注意的地方：有时我们的程序太过于简单导致运行时间过短，短到电脑没办法捕捉到，这时只需要一个循环让它多跑几次，把最后得到的时间除以循环次数就可以了。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxK 10</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxH 1e7</span></span><br><span class="line"><span class="keyword">clock_t</span> start, <span class="built_in">stop</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> duration;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">double</span> a[], <span class="keyword">double</span> x)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">double</span> a[], <span class="keyword">double</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;<span class="keyword">double</span> p = a[n];</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=n;i&gt;<span class="number">0</span>;i--)&#123;</span><br><span class="line">		p = a[i<span class="number">-1</span>]+x*p;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> a[maxK];<span class="keyword">int</span> i;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=maxK;i++) a[i]=i;</span><br><span class="line">	</span><br><span class="line">	start = clock();</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;maxH;i++)&#123;</span><br><span class="line">		f(maxK, a, <span class="number">1.23</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">stop</span> = clock();</span><br><span class="line">	</span><br><span class="line">	duration = (<span class="keyword">double</span>)(<span class="built_in">stop</span> - start)/CLK_TCK/maxH;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"ticks=%f\n"</span>,(<span class="keyword">double</span>)(<span class="built_in">stop</span> - start));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"duration=%6.2e\n"</span>,duration);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>·</strong>目前我学到的C语言关于时间的程序就是这些了，以后有的话会继续更新哟（这些关于时间的函数都存在time库里，用的时候别忘了加time的头文件）。快去试试这些程序吧！</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">html笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
+        			<a href="/categories/html//" class="article-tag-list-link color5">html</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/16/c%E8%AF%AD%E8%A8%80%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/05/17/sublime%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90html%E9%AA%A8%E6%9E%B6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          sublime快速生成html骨架
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/05/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇blog</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -374,10 +237,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
