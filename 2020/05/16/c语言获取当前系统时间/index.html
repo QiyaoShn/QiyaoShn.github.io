@@ -16,7 +16,7 @@
 <meta property="og:description" content="C语言那些关于时间的程序获取当前系统时间用途一·需要对获取的当前的日期做出一些运算，不仅仅是输出显示。 1234567891011121314151617#include&lt;stdio.h&gt;#include&lt;time.h&gt;int main()&amp;#123;	int day,month,year,days;	time_t timep;	struct tm *p;	time (&amp;a">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-16T03:00:36.000Z">
-<meta property="article:modified_time" content="2020-05-16T04:31:42.023Z">
+<meta property="article:modified_time" content="2020-05-30T03:29:57.103Z">
 <meta property="article:author" content="QiYao Shn">
 <meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary">
@@ -186,7 +186,7 @@
 <p><strong>·</strong>值得注意的地方：用来存时间的字符数组(也可以说是字符串)一定要足够大能放下这个时间字符串。</p>
 <h3 id="小贴士"><a href="#小贴士" class="headerlink" title="小贴士"></a>小贴士</h3><p><strong>·</strong>如果你不仅仅想要只是输出年月日等等的这些时间，可以参考下面这个网址。</p>
 <p>[百度struct tm](<a href="https://baike.baidu.com/item/struct" target="_blank" rel="noopener">https://baike.baidu.com/item/struct</a> tm/3589199?fr=aladdin) </p>
-<p><strong>·</strong>C语言的stdio库里定义过tm的结构体，所以不要疑惑<strong>用途一</strong>里面为什么没有定义过tm的结构体，还可以用它来定义p这个结构体指针？？其实它藏在stdio库里，直接使用就可以了。这个做过C语言项目.dev的同学很容易就能理解了(我用的dev的编译器)，我们经常来自定义.h，直接一个#include “·····.h”就可以在主程序里用.h里面定义好的东西了。</p>
+<p><strong>·</strong>C语言的time库里定义过tm的结构体，所以不要疑惑<strong>用途一</strong>里面为什么没有定义过tm的结构体，还可以用它来定义p这个结构体指针？？其实它藏在time库里，直接使用就可以了。这个做过C语言项目.dev的同学很容易就能理解了(我用的dev的编译器)，我们经常来自定义.h，直接一个#include “·····.h”就可以在主程序里用.h里面定义好的东西了。</p>
 <h2 id="程序计时"><a href="#程序计时" class="headerlink" title="程序计时"></a>程序计时</h2><p><strong>·</strong>想要为自己设计的程序计时吗，只需要简单的几句话就可以了。</p>
 <p><strong>·</strong>值得注意的地方：有时我们的程序太过于简单导致运行时间过短，短到电脑没办法捕捉到，这时只需要一个循环让它多跑几次，把最后得到的时间除以循环次数就可以了。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxK 10</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxH 1e7</span></span><br><span class="line"><span class="keyword">clock_t</span> start, <span class="built_in">stop</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> duration;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">double</span> a[], <span class="keyword">double</span> x)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">double</span> a[], <span class="keyword">double</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;<span class="keyword">double</span> p = a[n];</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=n;i&gt;<span class="number">0</span>;i--)&#123;</span><br><span class="line">		p = a[i<span class="number">-1</span>]+x*p;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> a[maxK];<span class="keyword">int</span> i;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=maxK;i++) a[i]=i;</span><br><span class="line">	</span><br><span class="line">	start = clock();</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;maxH;i++)&#123;</span><br><span class="line">		f(maxK, a, <span class="number">1.23</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">stop</span> = clock();</span><br><span class="line">	</span><br><span class="line">	duration = (<span class="keyword">double</span>)(<span class="built_in">stop</span> - start)/CLK_TCK/maxH;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"ticks=%f\n"</span>,(<span class="keyword">double</span>)(<span class="built_in">stop</span> - start));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"duration=%6.2e\n"</span>,duration);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -444,15 +444,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">html笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
