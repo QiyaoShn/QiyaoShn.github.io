@@ -6,20 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>c语言获取当前系统时间的不同用法 | QiYao Shn&#39;s blog</title>
+  <title>数据读写入文件的格式 | QiYao Shn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="C语言那些关于时间的程序获取当前系统时间用途一·需要对获取的当前的日期做出一些运算，不仅仅是输出显示。 1234567891011121314151617#include&lt;stdio.h&gt;#include&lt;time.h&gt;int main()&amp;#123;	int day,month,year,days;	time_t timep;	struct tm *p;	time (&amp;a">
+  <meta name="description" content="数据读写入文件的格式用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展1.数据写入错误代码: 123456ls&#x3D;[[1,2],[3,4],[5,6]]fname&#x3D;input()txt&#x3D;open(fname,&#39;w&#39;)for item in ls:    txt.write(&quot;,&quot;.join(item)+&#39;\n&#39;)txt.close()  可以看到第一行的列表ls是希望输入一个二维数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="c语言获取当前系统时间的不同用法">
-<meta property="og:url" content="http://yoursite.com/2020/05/16/c%E8%AF%AD%E8%A8%80%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4/index.html">
+<meta property="og:title" content="数据读写入文件的格式">
+<meta property="og:url" content="http://yoursite.com/post/9e7a5d7d.html">
 <meta property="og:site_name" content="QiYao Shn&#39;s blog">
-<meta property="og:description" content="C语言那些关于时间的程序获取当前系统时间用途一·需要对获取的当前的日期做出一些运算，不仅仅是输出显示。 1234567891011121314151617#include&lt;stdio.h&gt;#include&lt;time.h&gt;int main()&amp;#123;	int day,month,year,days;	time_t timep;	struct tm *p;	time (&amp;a">
+<meta property="og:description" content="数据读写入文件的格式用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展1.数据写入错误代码: 123456ls&#x3D;[[1,2],[3,4],[5,6]]fname&#x3D;input()txt&#x3D;open(fname,&#39;w&#39;)for item in ls:    txt.write(&quot;,&quot;.join(item)+&#39;\n&#39;)txt.close()  可以看到第一行的列表ls是希望输入一个二维数">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-16T03:00:36.000Z">
-<meta property="article:modified_time" content="2020-05-30T09:53:04.354Z">
+<meta property="og:image" content="http://yoursite.com/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cerror1.jpg">
+<meta property="og:image" content="http://yoursite.com/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cnumber1.jpg">
+<meta property="og:image" content="http://yoursite.com/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cnumber2.jpg">
+<meta property="og:image" content="http://yoursite.com/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cnumber3.jpg">
+<meta property="article:published_time" content="2020-08-06T10:00:34.000Z">
+<meta property="article:modified_time" content="2020-08-06T11:32:49.777Z">
 <meta property="article:author" content="QiYao Shn">
-<meta property="article:tag" content="C语言">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cerror1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="QiYao Shn&#39;s blog" type="application/atom+xml">
   
@@ -155,44 +160,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-c语言获取当前系统时间" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-数据写入文件的格式" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      c语言获取当前系统时间的不同用法
+      数据读写入文件的格式
     </h1>
   
 
         
-        <a href="/2020/05/16/c%E8%AF%AD%E8%A8%80%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4/" class="archive-article-date">
-  	<time datetime="2020-05-16T03:00:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
+        <a href="/post/9e7a5d7d.html" class="archive-article-date">
+  	<time datetime="2020-08-06T10:00:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="C语言那些关于时间的程序"><a href="#C语言那些关于时间的程序" class="headerlink" title="C语言那些关于时间的程序"></a>C语言那些关于时间的程序</h1><h2 id="获取当前系统时间"><a href="#获取当前系统时间" class="headerlink" title="获取当前系统时间"></a>获取当前系统时间</h2><h3 id="用途一"><a href="#用途一" class="headerlink" title="用途一"></a>用途一</h3><p><strong>·</strong>需要对获取的当前的日期做出一些运算，不仅仅是输出显示。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> day,month,year,days;</span><br><span class="line">	<span class="keyword">time_t</span> timep;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">tm</span> *<span class="title">p</span>;</span></span><br><span class="line">	time (&amp;timep);</span><br><span class="line">	</span><br><span class="line">	p=localtime(&amp;timep);</span><br><span class="line">	day=(p-&gt;tm_mday);			<span class="comment">//当前月份日数</span></span><br><span class="line">	month=(<span class="number">1</span>+p-&gt;tm_mon);		<span class="comment">//当前月份</span></span><br><span class="line">	year=(<span class="number">1900</span>+p-&gt;tm_year);		<span class="comment">//当前年份</span></span><br><span class="line">	days=(p-&gt;tm_yday);			<span class="comment">//从今年1月1日算起至今的天数</span></span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d-%d-%d %d"</span>,year,month,day,days);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="数据读写入文件的格式"><a href="#数据读写入文件的格式" class="headerlink" title="数据读写入文件的格式"></a>数据读写入文件的格式</h1><h2 id="用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展"><a href="#用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展" class="headerlink" title="用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展"></a>用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展</h2><h3 id="1-数据写入"><a href="#1-数据写入" class="headerlink" title="1.数据写入"></a>1.数据写入</h3><p>错误代码:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ls=[[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]]</span><br><span class="line">fname=input()</span><br><span class="line">txt=open(fname,<span class="string">'w'</span>)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> ls:</span><br><span class="line">    txt.write(<span class="string">","</span>.join(item)+<span class="string">'\n'</span>)</span><br><span class="line">txt.close()</span><br></pre></td></tr></table></figure>
 
-<h3 id="用途二"><a href="#用途二" class="headerlink" title="用途二"></a>用途二</h3><p><strong>·</strong>仅仅只是输出显示当前系统时间，并且希望代码看上去简洁一点。</p>
-<p><strong>·</strong>希望自定义输出的系统时间的格式，比如用于命名文件会很方便。(每新建一个文件都能从文件名看到建立文件的日期，是不是很酷！)这个时间的输出格式很多，可参考这个博客，输出自己想要的格式。</p>
-<p><a href="https://blog.csdn.net/weixin_34419321/article/details/89398411" target="_blank" rel="noopener">输出时间的格式</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;time.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">	char name[100]&#x3D;&#123;0&#125;;</span><br><span class="line">	time_t timep;</span><br><span class="line">	time(&amp;timep);</span><br><span class="line">	strftime(name,sizeof(name),</span><br><span class="line">	&quot;%B.%d.%Y %H-%M-%S.txt&quot;,localtime(&amp;timep));</span><br><span class="line">	printf(&quot;%s&quot;,name);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到第一行的列表ls是希望输入一个二维数据，每个行元素中都直接输入了两个数字并以<strong>“ , ”</strong><del>分隔</del>好吧，其实这里它并没有起到分隔作用，因为write函数只能向文件写入一个字符串或者字节流，直接输入数字就会报错，就像这样-&gt;</p>
+<p> <img src="/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cerror1.jpg" alt="error1"></p>
+<p>python中常用的数据写入文件的函数只有write()和writelines()，它们都只能向文件中写入字符串或字节流，所以为了保险起见，不管向文件中写入数据还是文字都加上双引号吧……</p>
+<p>更正：</p>
+<p><code>ls=[[&quot;1&quot;,&quot;2&quot;],[&quot;3&quot;,&quot;4&quot;],[&quot;5&quot;,&quot;6&quot;]]</code></p>
+<p>完整代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#数据写入</span></span><br><span class="line">ls=[[<span class="string">"1"</span>,<span class="string">"2"</span>],[<span class="string">"3"</span>,<span class="string">"4"</span>],[<span class="string">"5"</span>,<span class="string">"6"</span>]]</span><br><span class="line">fname=input()</span><br><span class="line">txt=open(fname,<span class="string">"w"</span>)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> ls:</span><br><span class="line">    txt.write(<span class="string">","</span>.join(item)+<span class="string">'\n'</span>)</span><br><span class="line">txt.close()</span><br><span class="line"><span class="comment">#数据读出</span></span><br><span class="line">fd=open(fname)</span><br><span class="line">lt=[]</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> fd: </span><br><span class="line">    line=line.replace(<span class="string">"\n"</span>,<span class="string">""</span>)</span><br><span class="line">    lt.append(line.split(<span class="string">","</span>))</span><br><span class="line">print(lt)</span><br><span class="line">fd.close()</span><br></pre></td></tr></table></figure>
 
-<p><strong>·</strong>值得注意的地方：用来存时间的字符数组(也可以说是字符串)一定要足够大能放下这个时间字符串。</p>
-<h3 id="小贴士"><a href="#小贴士" class="headerlink" title="小贴士"></a>小贴士</h3><p><strong>·</strong>如果你不仅仅想要只是输出年月日等等的这些时间，可以参考下面这个网址。</p>
-<p>[百度struct tm](<a href="https://baike.baidu.com/item/struct" target="_blank" rel="noopener">https://baike.baidu.com/item/struct</a> tm/3589199?fr=aladdin) </p>
-<p><strong>·</strong>C语言的time库里定义过tm的结构体，所以不要疑惑<strong>用途一</strong>里面为什么没有定义过tm的结构体，还可以用它来定义p这个结构体指针？？其实它藏在time库里，直接使用就可以了。这个做过C语言项目.dev的同学很容易就能理解了(我用的dev的编译器)，我们经常来自定义.h，直接一个#include “·····.h”就可以在主程序里用.h里面定义好的东西了。</p>
-<h2 id="程序计时"><a href="#程序计时" class="headerlink" title="程序计时"></a>程序计时</h2><p><strong>·</strong>想要为自己设计的程序计时吗，只需要简单的几句话就可以了。</p>
-<p><strong>·</strong>值得注意的地方：有时我们的程序太过于简单导致运行时间过短，短到电脑没办法捕捉到，这时只需要一个循环让它多跑几次，把最后得到的时间除以循环次数就可以了。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxK 10</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxH 1e7</span></span><br><span class="line"><span class="keyword">clock_t</span> start, <span class="built_in">stop</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> duration;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">double</span> a[], <span class="keyword">double</span> x)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">double</span> a[], <span class="keyword">double</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;<span class="keyword">double</span> p = a[n];</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=n;i&gt;<span class="number">0</span>;i--)&#123;</span><br><span class="line">		p = a[i<span class="number">-1</span>]+x*p;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> a[maxK];<span class="keyword">int</span> i;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=maxK;i++) a[i]=i;</span><br><span class="line">	</span><br><span class="line">	start = clock();</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;maxH;i++)&#123;</span><br><span class="line">		f(maxK, a, <span class="number">1.23</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">stop</span> = clock();</span><br><span class="line">	</span><br><span class="line">	duration = (<span class="keyword">double</span>)(<span class="built_in">stop</span> - start)/CLK_TCK/maxH;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"ticks=%f\n"</span>,(<span class="keyword">double</span>)(<span class="built_in">stop</span> - start));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"duration=%6.2e\n"</span>,duration);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<p><img src="/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cnumber1.jpg" alt="number1">)<img src="/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cnumber2.jpg" alt="number2">)<img src="/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cnumber3.jpg" alt="number3"></p>
+<h3 id="2-数据读出"><a href="#2-数据读出" class="headerlink" title="2.数据读出"></a>2.数据读出</h3><p>从文件中读出的数据实际上是字符串，如果需要对数据进行处理、运算，需要用eval函数将其两侧的引号去掉。举例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fp=open(<span class="string">"data.txt"</span>)</span><br><span class="line">details=[]</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> fp:</span><br><span class="line">    line=line.replace(<span class="string">"\n"</span>,<span class="string">""</span>)</span><br><span class="line">    details.append(list(map(eval,line.split(<span class="string">","</span>))))</span><br><span class="line">fp.close()</span><br></pre></td></tr></table></figure>
 
-<p><strong>·</strong>目前我学到的C语言关于时间的程序就是这些了，以后有的话会继续更新哟（这些关于时间的函数都存在time库里，用的时候别忘了加time的头文件）。快去试试这些程序吧！</p>
-
+<h3 id="结论：不论是将数据写入文件还是从文件中读取下来，这个数据的类型都是字符串，不能直接当作数字使用。"><a href="#结论：不论是将数据写入文件还是从文件中读取下来，这个数据的类型都是字符串，不能直接当作数字使用。" class="headerlink" title="结论：不论是将数据写入文件还是从文件中读取下来，这个数据的类型都是字符串，不能直接当作数字使用。"></a>结论：不论是将数据写入文件还是从文件中读取下来，这个数据的类型都是字符串，不能直接当作数字使用。</h3>
       
 
       
@@ -226,7 +230,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
@@ -238,7 +242,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/关于时间//" class="article-tag-list-link color5">关于时间</a>
+        			<a href="/categories/笔记记录//" class="article-tag-list-link color5">笔记记录</a>
         		</li>
       		
 		</ul>
@@ -293,7 +297,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/16/c%E8%AF%AD%E8%A8%80%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/post/9e7a5d7d.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -307,18 +311,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/17/sublime%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90html%E4%BB%A3%E7%A0%81/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          sublime快速生成html代码
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/16/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇blog</div>
+    <a href="/post/afef67b4.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PAT刷题之map的简单用法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -448,6 +443,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">html笔记</a>
               </li>
              
@@ -456,7 +455,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>
