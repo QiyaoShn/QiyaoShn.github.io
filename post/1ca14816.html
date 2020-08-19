@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>c语言获取当前系统时间的不同用法 | QiYao Shn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="C语言那些关于时间的程序获取当前系统时间用途一·需要对获取的当前的日期做出一些运算，不仅仅是输出显示。 1234567891011121314151617#include&lt;stdio.h&gt;#include&lt;time.h&gt;int main()&amp;#123;	int day,month,year,days;	time_t timep;	struct tm *p;	time (&amp;a">
+  <meta name="description" content="C语言那些关于时间的程序获取当前系统时间用途一·需要对获取的当前的日期做出一些运算，不仅仅是输出显示。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c语言获取当前系统时间的不同用法">
 <meta property="og:url" content="http://yoursite.com/post/1ca14816.html">
 <meta property="og:site_name" content="QiYao Shn&#39;s blog">
-<meta property="og:description" content="C语言那些关于时间的程序获取当前系统时间用途一·需要对获取的当前的日期做出一些运算，不仅仅是输出显示。 1234567891011121314151617#include&lt;stdio.h&gt;#include&lt;time.h&gt;int main()&amp;#123;	int day,month,year,days;	time_t timep;	struct tm *p;	time (&amp;a">
+<meta property="og:description" content="C语言那些关于时间的程序获取当前系统时间用途一·需要对获取的当前的日期做出一些运算，不仅仅是输出显示。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-16T03:00:36.000Z">
-<meta property="article:modified_time" content="2020-08-06T11:29:17.420Z">
+<meta property="article:modified_time" content="2020-08-19T11:45:20.679Z">
 <meta property="article:author" content="QiYao Shn">
 <meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary">
@@ -176,6 +176,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="C语言那些关于时间的程序"><a href="#C语言那些关于时间的程序" class="headerlink" title="C语言那些关于时间的程序"></a>C语言那些关于时间的程序</h1><h2 id="获取当前系统时间"><a href="#获取当前系统时间" class="headerlink" title="获取当前系统时间"></a>获取当前系统时间</h2><h3 id="用途一"><a href="#用途一" class="headerlink" title="用途一"></a>用途一</h3><p><strong>·</strong>需要对获取的当前的日期做出一些运算，不仅仅是输出显示。</p>
+<a id="more"></a>
+
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> day,month,year,days;</span><br><span class="line">	<span class="keyword">time_t</span> timep;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">tm</span> *<span class="title">p</span>;</span></span><br><span class="line">	time (&amp;timep);</span><br><span class="line">	</span><br><span class="line">	p=localtime(&amp;timep);</span><br><span class="line">	day=(p-&gt;tm_mday);			<span class="comment">//当前月份日数</span></span><br><span class="line">	month=(<span class="number">1</span>+p-&gt;tm_mon);		<span class="comment">//当前月份</span></span><br><span class="line">	year=(<span class="number">1900</span>+p-&gt;tm_year);		<span class="comment">//当前年份</span></span><br><span class="line">	days=(p-&gt;tm_yday);			<span class="comment">//从今年1月1日算起至今的天数</span></span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d-%d-%d %d"</span>,year,month,day,days);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="用途二"><a href="#用途二" class="headerlink" title="用途二"></a>用途二</h3><p><strong>·</strong>仅仅只是输出显示当前系统时间，并且希望代码看上去简洁一点。</p>

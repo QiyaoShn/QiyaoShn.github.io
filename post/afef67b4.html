@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>PAT刷题之map的简单用法 | QiYao Shn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="PAT刷题map简单用法map的用法链接·map的用法很多，详细用法可详见下面这个链接： C++中的STL中map用法详解 ·这道PAT题目中只涉及了简单的map用法。map是一个容器，举一个通俗的例子：把map看作字典，如果要编写一个能对文章内每个字眼的出现次数加以分析的程序，可以建立一份map，带有char key和int value(前者表现单字，后者表现出现次数)： 12345#inclu">
+  <meta name="description" content="PAT刷题map简单用法map的用法链接·map的用法很多，详细用法可详见下面这个链接： C++中的STL中map用法详解 ·这道PAT题目中只涉及了简单的map用法。map是一个容器，举一个通俗的例子：把map看作字典，如果要编写一个能对文章内每个字眼的出现次数加以分析的程序，可以建立一份map，带有char key和int value(前者表现单字，后者表现出现次数)：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PAT刷题之map的简单用法">
 <meta property="og:url" content="http://yoursite.com/post/afef67b4.html">
 <meta property="og:site_name" content="QiYao Shn&#39;s blog">
-<meta property="og:description" content="PAT刷题map简单用法map的用法链接·map的用法很多，详细用法可详见下面这个链接： C++中的STL中map用法详解 ·这道PAT题目中只涉及了简单的map用法。map是一个容器，举一个通俗的例子：把map看作字典，如果要编写一个能对文章内每个字眼的出现次数加以分析的程序，可以建立一份map，带有char key和int value(前者表现单字，后者表现出现次数)： 12345#inclu">
+<meta property="og:description" content="PAT刷题map简单用法map的用法链接·map的用法很多，详细用法可详见下面这个链接： C++中的STL中map用法详解 ·这道PAT题目中只涉及了简单的map用法。map是一个容器，举一个通俗的例子：把map看作字典，如果要编写一个能对文章内每个字眼的出现次数加以分析的程序，可以建立一份map，带有char key和int value(前者表现单字，后者表现出现次数)：">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591712158172&di=8481f768e258f77b21ebdcac10e6ef38&imgtype=0&src=http%253A%252F%252Fpic182.nipic.com%252Ffile%252F20180917%252F13006969_195859564000_2.jpg">
 <meta property="article:published_time" content="2020-06-09T10:37:36.000Z">
-<meta property="article:modified_time" content="2020-08-06T11:29:17.416Z">
+<meta property="article:modified_time" content="2020-08-19T11:44:58.168Z">
 <meta property="article:author" content="QiYao Shn">
 <meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
@@ -180,6 +180,8 @@
         <h1 id="PAT刷题map简单用法"><a href="#PAT刷题map简单用法" class="headerlink" title="PAT刷题map简单用法"></a>PAT刷题map简单用法</h1><h2 id="map的用法链接"><a href="#map的用法链接" class="headerlink" title="map的用法链接"></a>map的用法链接</h2><p><strong>·</strong>map的用法很多，详细用法可详见下面这个链接：</p>
 <p><a href="https://www.cnblogs.com/fnlingnzb-learner/p/5833051.html" target="_blank" rel="noopener">C++中的STL中map用法详解</a></p>
 <p><strong>·</strong>这道PAT题目中只涉及了简单的map用法。map是一个容器，举一个通俗的例子：把map看作字典，如果要编写一个能对文章内每个字眼的出现次数加以分析的程序，可以建立一份map，带有<code>char key</code>和<code>int value</code>(前者表现单字，后者表现出现次数)：</p>
+<a id="more"></a>
+
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="built_in">map</span>&lt;<span class="keyword">char</span>,<span class="keyword">int</span>&gt;<span class="keyword">word</span>;</span><br><span class="line"><span class="keyword">char</span> tword;</span><br><span class="line"><span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;tword)</span><br><span class="line">    <span class="keyword">word</span>[tword]++;</span><br></pre></td></tr></table></figure>
 
 <p>其中word[tword]会取出tword相应的value,即tword在word这个map中出现的次数。如果tword不在map内，它便会因此被放到map内，并获得默认值0。稍后再次出现tword其value值递增1。</p>
