@@ -176,19 +176,10 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ls=[[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]]</span><br><span class="line">fname=input()</span><br><span class="line">txt=open(fname,<span class="string">'w'</span>)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> ls:</span><br><span class="line">    txt.write(<span class="string">","</span>.join(item)+<span class="string">'\n'</span>)</span><br><span class="line">txt.close()</span><br></pre></td></tr></table></figure>
 
 <p>可以看到第一行的列表ls是希望输入一个二维数据，每个行元素中都直接输入了两个数字并以<strong>“ , ”</strong><del>分隔</del>好吧，其实这里它并没有起到分隔作用，因为write函数只能向文件写入一个字符串或者字节流，直接输入数字就会报错，就像这样-&gt;</p>
-<p> <img src="/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cerror1.jpg" alt="error1"></p>
-<p>python中常用的数据写入文件的函数只有write()和writelines()，它们都只能向文件中写入字符串或字节流，所以为了保险起见，不管向文件中写入数据还是文字都加上双引号吧……</p>
-<p>更正：</p>
-<p><code>ls=[[&quot;1&quot;,&quot;2&quot;],[&quot;3&quot;,&quot;4&quot;],[&quot;5&quot;,&quot;6&quot;]]</code></p>
-<p>完整代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#数据写入</span></span><br><span class="line">ls=[[<span class="string">"1"</span>,<span class="string">"2"</span>],[<span class="string">"3"</span>,<span class="string">"4"</span>],[<span class="string">"5"</span>,<span class="string">"6"</span>]]</span><br><span class="line">fname=input()</span><br><span class="line">txt=open(fname,<span class="string">"w"</span>)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> ls:</span><br><span class="line">    txt.write(<span class="string">","</span>.join(item)+<span class="string">'\n'</span>)</span><br><span class="line">txt.close()</span><br><span class="line"><span class="comment">#数据读出</span></span><br><span class="line">fd=open(fname)</span><br><span class="line">lt=[]</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> fd: </span><br><span class="line">    line=line.replace(<span class="string">"\n"</span>,<span class="string">""</span>)</span><br><span class="line">    lt.append(line.split(<span class="string">","</span>))</span><br><span class="line">print(lt)</span><br><span class="line">fd.close()</span><br></pre></td></tr></table></figure>
-
-<p>运行结果：</p>
-<p><img src="/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cnumber1.jpg" alt="number1">)<img src="/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cnumber2.jpg" alt="number2">)<img src="/post/9e7a5d7d.htm/E:%5Cblog%5Csource%5Cimg%5Cnumber3.jpg" alt="number3"></p>
-<h3 id="2-数据读出"><a href="#2-数据读出" class="headerlink" title="2.数据读出"></a>2.数据读出</h3><p>从文件中读出的数据实际上是字符串，如果需要对数据进行处理、运算，需要用eval函数将其两侧的引号去掉。举例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fp=open(<span class="string">"data.txt"</span>)</span><br><span class="line">details=[]</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> fp:</span><br><span class="line">    line=line.replace(<span class="string">"\n"</span>,<span class="string">""</span>)</span><br><span class="line">    details.append(list(map(eval,line.split(<span class="string">","</span>))))</span><br><span class="line">fp.close()</span><br></pre></td></tr></table></figure>
-
-<h3 id="结论：不论是将数据写入文件还是从文件中读取下来，这个数据的类型都是字符串，不能直接当作数字使用。"><a href="#结论：不论是将数据写入文件还是从文件中读取下来，这个数据的类型都是字符串，不能直接当作数字使用。" class="headerlink" title="结论：不论是将数据写入文件还是从文件中读取下来，这个数据的类型都是字符串，不能直接当作数字使用。"></a>结论：不论是将数据写入文件还是从文件中读取下来，这个数据的类型都是字符串，不能直接当作数字使用。</h3>
+<p><img src="https://i.loli.net/2020/08/19/mWtJqKAonY6xE4D.jpg" alt="error1.jpg"></p>
+        
+          <a class="article-more-a" href="/post/9e7a5d7d.html#more">more >></a>
+        
       
 
       
@@ -365,19 +356,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="如何在命令提示符中调试程序"><a href="#如何在命令提示符中调试程序" class="headerlink" title="如何在命令提示符中调试程序"></a>如何在命令提示符中调试程序</h1><h2 id="1-搜索cmd召唤命令提示符"><a href="#1-搜索cmd召唤命令提示符" class="headerlink" title="1.搜索cmd召唤命令提示符"></a>1.搜索cmd召唤命令提示符</h2><h2 id="2-进入存好的程序的文件里"><a href="#2-进入存好的程序的文件里" class="headerlink" title="2.进入存好的程序的文件里"></a>2.进入存好的程序的文件里</h2><img src="/post/49704112.htm/5-30-1.jpg">
-
-<p>ps: 一定要确认目标文件里有程序的exe文件,没有就在编译器里运行程序，生成一个exe文件。</p>
-<h2 id="3-具体实现"><a href="#3-具体实现" class="headerlink" title="3.具体实现"></a>3.具体实现</h2><p><code>dir        //查询目标文件里有哪些目录</code></p>
-<p>举例：</p>
-<h3 id="cpp中的代码"><a href="#cpp中的代码" class="headerlink" title=".cpp中的代码"></a>.cpp中的代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;stdlib.h&gt;</span><br><span class="line">int main(int argc,char *argv[])&#123;</span><br><span class="line">	int a,b,c;</span><br><span class="line">	a&#x3D;atoi(argv[1]);</span><br><span class="line">	b&#x3D;atoi(argv[2]);</span><br><span class="line">	c&#x3D;a+b;</span><br><span class="line">	printf(&quot;%d+%d&#x3D;%d&quot;,a,b,c);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="命令提示符中的操作"><a href="#命令提示符中的操作" class="headerlink" title="命令提示符中的操作"></a>命令提示符中的操作</h3><img src="/post/49704112.htm/5-30-2.jpg">
-
-<h2 id="4-补充"><a href="#4-补充" class="headerlink" title="4.补充"></a>4.补充</h2><blockquote>
-<p> atoi (表示 ascii to integer)是把字符串转换成<a href="https://baike.baidu.com/item/整型/68205" target="_blank" rel="noopener">整型</a>数的一个函数。int atoi(const char *nptr) 函数会扫描参数 nptr字符串，会跳过前面的空白字符（例如空格，tab缩进）等。如果 nptr不能转换成 int 或者 nptr为空字符串，那么将返回 0 [1] 。特别注意，该函数要求被转换的字符串是按十进制数理解的。atoi输入的字符串对应数字存在大小限制（与int类型大小有关），若其过大可能报错-1。 (引用自百度百科)</p>
-</blockquote>
-
+        <h1 id="如何在命令提示符中调试程序"><a href="#如何在命令提示符中调试程序" class="headerlink" title="如何在命令提示符中调试程序"></a>如何在命令提示符中调试程序</h1><h2 id="1-搜索cmd召唤命令提示符"><a href="#1-搜索cmd召唤命令提示符" class="headerlink" title="1.搜索cmd召唤命令提示符"></a>1.搜索cmd召唤命令提示符</h2><h2 id="2-进入存好的程序的文件里"><a href="#2-进入存好的程序的文件里" class="headerlink" title="2.进入存好的程序的文件里"></a>2.进入存好的程序的文件里</h2><p><img src="https://i.loli.net/2020/08/19/SreqycfP3D2jkVt.jpg" alt="5-30-1.jpg"></p>
+        
+          <a class="article-more-a" href="/post/49704112.html#more">more >></a>
+        
       
 
       
@@ -655,6 +637,9 @@
 <p><code>cnpm install</code>也总是报错，没错，再加个<code>hexo g</code>,public文件就出现了。<br>这是我反复几次重新开始踩得最多的坑。<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589601864942&di=f0eaadb1a922a2e57c5d79e24d909163&imgtype=0&src=http%3A%2F%2Fimg.anhuiqq.cn%2Fupload%2Fimage%2F5a2481314514n4233819951t27.jpg" alt="朴实的微笑中带着些许疲惫"></p>
 <h2 id="搭好了博客怎么写"><a href="#搭好了博客怎么写" class="headerlink" title="搭好了博客怎么写"></a>搭好了博客怎么写</h2><p>经历9981难，搭好了博客，那么该怎么写呢？此处建议下载一个Typora，我是在电脑管家上下载的。这个支持markdown编辑语法，很nice。这个是我看的一个比较好的markdown的教程。<br><a href="https://www.jianshu.com/p/191d1e21f7ed/" target="_blank" rel="noopener">简书</a></p>
 <h1 id="那么开始愉快地写blog吧"><a href="#那么开始愉快地写blog吧" class="headerlink" title="那么开始愉快地写blog吧"></a><strong>那么开始愉快地写blog吧</strong></h1>
+        
+          <a class="article-more-a" href="/post/4d5d007a.html#more">more >></a>
+        
       
 
       
