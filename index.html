@@ -263,9 +263,6 @@
       
         <h1 id="数据读写入文件的格式"><a href="#数据读写入文件的格式" class="headerlink" title="数据读写入文件的格式"></a>数据读写入文件的格式</h1><h2 id="用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展"><a href="#用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展" class="headerlink" title="用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展"></a>用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展</h2><h3 id="1-数据写入"><a href="#1-数据写入" class="headerlink" title="1.数据写入"></a>1.数据写入</h3><p>错误代码:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ls=[[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]]</span><br><span class="line">fname=input()</span><br><span class="line">txt=open(fname,<span class="string">'w'</span>)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> ls:</span><br><span class="line">    txt.write(<span class="string">","</span>.join(item)+<span class="string">'\n'</span>)</span><br><span class="line">txt.close()</span><br></pre></td></tr></table></figure>
-
-<p>可以看到第一行的列表ls是希望输入一个二维数据，每个行元素中都直接输入了两个数字并以<strong>“ , ”</strong><del>分隔</del>好吧，其实这里它并没有起到分隔作用，因为write函数只能向文件写入一个字符串或者字节流，直接输入数字就会报错，就像这样-&gt;</p>
-<p><img src="https://i.loli.net/2020/08/19/mWtJqKAonY6xE4D.jpg" alt="error1.jpg"></p>
         
           <a class="article-more-a" href="/post/9e7a5d7d.html#more">more >></a>
         
