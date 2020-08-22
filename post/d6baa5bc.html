@@ -6,15 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>QiYao Shn&#39;s blog</title>
+  <title>使用git管理GitHub上的代码 | QiYao Shn&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="QiYao Shn&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="使用git管理GitHub上的代码环境：windows  电脑：华为（可能和用苹果的小伙伴有些许不同） 已配置sshUseage：1.新建仓库 这里建议直接在GitHub上新建仓库，我试过在本地新建用git推，然后放弃失败了。新建仓库只需要两步，如图：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用git管理GitHub上的代码">
+<meta property="og:url" content="http://yoursite.com/post/d6baa5bc.html">
 <meta property="og:site_name" content="QiYao Shn&#39;s blog">
+<meta property="og:description" content="使用git管理GitHub上的代码环境：windows  电脑：华为（可能和用苹果的小伙伴有些许不同） 已配置sshUseage：1.新建仓库 这里建议直接在GitHub上新建仓库，我试过在本地新建用git推，然后放弃失败了。新建仓库只需要两步，如图：">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/08/22/FjxS7VXQAD23vgU.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/08/22/IPQEC2dvpL4XVa6.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/08/22/KGQhAJBv6UtswnY.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/08/22/sqYl19EvWTOMafA.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/08/22/sfxGyYqi3MHO2Re.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/08/22/mZ3HYacRXUIxfvW.jpg">
+<meta property="article:published_time" content="2020-08-22T02:46:45.000Z">
+<meta property="article:modified_time" content="2020-08-22T04:00:20.014Z">
 <meta property="article:author" content="QiYao Shn">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/08/22/FjxS7VXQAD23vgU.jpg">
   
     <link rel="alternative" href="/atom.xml" title="QiYao Shn&#39;s blog" type="application/atom+xml">
   
@@ -150,16 +162,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-使用git管理GitHub上的代码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-使用git管理GitHub上的代码" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/post/d6baa5bc.html">使用git管理GitHub上的代码</a>
+    <h1 class="article-title" itemprop="name">
+      使用git管理GitHub上的代码
     </h1>
   
 
@@ -175,11 +185,47 @@
         <h1 id="使用git管理GitHub上的代码"><a href="#使用git管理GitHub上的代码" class="headerlink" title="使用git管理GitHub上的代码"></a>使用git管理GitHub上的代码</h1><h2 id="环境：windows-电脑：华为（可能和用苹果的小伙伴有些许不同）-已配置ssh"><a href="#环境：windows-电脑：华为（可能和用苹果的小伙伴有些许不同）-已配置ssh" class="headerlink" title="环境：windows  电脑：华为（可能和用苹果的小伙伴有些许不同） 已配置ssh"></a>环境：windows  电脑：华为（可能和用苹果的小伙伴有些许不同） 已配置ssh</h2><h3 id="Useage："><a href="#Useage：" class="headerlink" title="Useage："></a>Useage：</h3><p><strong>1.新建仓库</strong></p>
 <p>这里建议直接在GitHub上新建仓库，我试过在本地新建用git推，然后<del>放弃</del>失败了。新建仓库只需要两步，如图：</p>
 <p><img src="https://i.loli.net/2020/08/22/FjxS7VXQAD23vgU.jpg" alt="1.jpg"></p>
-        
-          <a class="article-more-a" href="/post/d6baa5bc.html#more">more >></a>
-        
+<a id="more"></a>
+
+<p><img src="https://i.loli.net/2020/08/22/IPQEC2dvpL4XVa6.jpg" alt="2.jpg"></p>
+<p>建好之后仓库长这样：</p>
+<p><img src="https://i.loli.net/2020/08/22/KGQhAJBv6UtswnY.jpg" alt="3.jpg"></p>
+<p><strong>2.新建文件夹</strong></p>
+<p>这个文件夹用来存放克隆的项目，位置自定。</p>
+<p><strong>3.初始化</strong></p>
+<p>点击进入新建好的文件夹中，鼠标右键，Git Bash here,出现黑色窗体，输入<strong><code>git init</code></strong>初始化，完成后会出现一个名为<strong>.git</strong>的文件夹。</p>
+<p><strong>4.克隆仓库</strong></p>
+<p>输入<strong><code>git clone url</code>//url是你要下载的代码的远程仓库地址</strong></p>
+<p><img src="https://i.loli.net/2020/08/22/sqYl19EvWTOMafA.jpg" alt="4.jpg"></p>
+<p><strong>5.提交改动</strong></p>
+<p>进入克隆下来的文件夹，如果希望在仓库里新增一个文件，直接新建一个，写入内容；如果希望修改已有的文件，直接打开修改即可。将改动提交到GitHub远程仓库的方法是：再次鼠标右键，Git Bash here,出现黑色窗体，输入<strong><code>git add 文件名</code></strong>和<strong><code>git commit -m &quot;提交备注&quot;</code></strong>最后输入<strong><code>git push origin master</code></strong>.推送成功后就可以在GitHub上看到改动了。</p>
+<p><img src="https://i.loli.net/2020/08/22/sfxGyYqi3MHO2Re.jpg" alt="5.jpg"></p>
+<p>红色的部分是之前的 README.md的版本，绿色的是在本地修改之后的版本。</p>
+<p><img src="https://i.loli.net/2020/08/22/mZ3HYacRXUIxfvW.jpg" alt="6.jpg"></p>
+<h3 id="该教程仅作为初步入门参考"><a href="#该教程仅作为初步入门参考" class="headerlink" title="该教程仅作为初步入门参考"></a>该教程仅作为初步入门参考</h3>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -210,16 +256,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/post/d6baa5bc.html">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/post/d6baa5bc.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/post/9e7a5d7d.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据读写入文件的格式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -239,537 +344,14 @@
 
 
 
-
   
-    <article id="post-数据写入文件的格式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/post/9e7a5d7d.html">数据读写入文件的格式</a>
-    </h1>
   
 
-        
-        <a href="/post/9e7a5d7d.html" class="archive-article-date">
-  	<time datetime="2020-08-06T10:00:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="数据读写入文件的格式"><a href="#数据读写入文件的格式" class="headerlink" title="数据读写入文件的格式"></a>数据读写入文件的格式</h1><h2 id="用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展"><a href="#用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展" class="headerlink" title="用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展"></a>用python把列表中的数据存入文件时遇到的问题–数据格式问题及拓展</h2><h3 id="1-数据写入"><a href="#1-数据写入" class="headerlink" title="1.数据写入"></a>1.数据写入</h3><p>错误代码:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ls=[[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]]</span><br><span class="line">fname=input()</span><br><span class="line">txt=open(fname,<span class="string">'w'</span>)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> ls:</span><br><span class="line">    txt.write(<span class="string">","</span>.join(item)+<span class="string">'\n'</span>)</span><br><span class="line">txt.close()</span><br></pre></td></tr></table></figure>
-
-<p>可以看到第一行的列表ls是希望输入一个二维数据，每个行元素中都直接输入了两个数字并以<strong>“ , ”</strong><del>分隔</del>好吧，其实这里它并没有起到分隔作用，因为write函数只能向文件写入一个字符串或者字节流，直接输入数字就会报错，就像这样-&gt;</p>
-<p><img src="https://i.loli.net/2020/08/19/mWtJqKAonY6xE4D.jpg" alt="error1.jpg"></p>
-        
-          <a class="article-more-a" href="/post/9e7a5d7d.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/笔记记录//" class="article-tag-list-link color5">笔记记录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/post/9e7a5d7d.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-PAT刷题之map的简单用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/post/afef67b4.html">PAT刷题之map的简单用法</a>
-    </h1>
   
 
-        
-        <a href="/post/afef67b4.html" class="archive-article-date">
-  	<time datetime="2020-06-09T10:37:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="PAT刷题map简单用法"><a href="#PAT刷题map简单用法" class="headerlink" title="PAT刷题map简单用法"></a>PAT刷题map简单用法</h1><h2 id="map的用法链接"><a href="#map的用法链接" class="headerlink" title="map的用法链接"></a>map的用法链接</h2><p><strong>·</strong>map的用法很多，详细用法可详见下面这个链接：</p>
-<p><a href="https://www.cnblogs.com/fnlingnzb-learner/p/5833051.html" target="_blank" rel="noopener">C++中的STL中map用法详解</a></p>
-<p><strong>·</strong>这道PAT题目中只涉及了简单的map用法。map是一个容器，举一个通俗的例子：把map看作字典，如果要编写一个能对文章内每个字眼的出现次数加以分析的程序，可以建立一份map，带有<code>char key</code>和<code>int value</code>(前者表现单字，后者表现出现次数)：</p>
-        
-          <a class="article-more-a" href="/post/afef67b4.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/PAT//" class="article-tag-list-link color4">PAT</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/post/afef67b4.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-在命令提示符调试程序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/post/49704112.html">在命令提示符调试程序</a>
-    </h1>
   
 
-        
-        <a href="/post/49704112.html" class="archive-article-date">
-  	<time datetime="2020-05-30T03:47:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="如何在命令提示符中调试程序"><a href="#如何在命令提示符中调试程序" class="headerlink" title="如何在命令提示符中调试程序"></a>如何在命令提示符中调试程序</h1><h2 id="1-搜索cmd召唤命令提示符"><a href="#1-搜索cmd召唤命令提示符" class="headerlink" title="1.搜索cmd召唤命令提示符"></a>1.搜索cmd召唤命令提示符</h2><h2 id="2-进入存好的程序的文件里"><a href="#2-进入存好的程序的文件里" class="headerlink" title="2.进入存好的程序的文件里"></a>2.进入存好的程序的文件里</h2><p><img src="https://i.loli.net/2020/08/19/SreqycfP3D2jkVt.jpg" alt="5-30-1.jpg"></p>
-        
-          <a class="article-more-a" href="/post/49704112.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/关于cmd上的调试//" class="article-tag-list-link color5">关于cmd上的调试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/post/49704112.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sublime快速生成html代码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/post/d6724731.html">sublime快速生成html代码</a>
-    </h1>
-  
-
-        
-        <a href="/post/d6724731.html" class="archive-article-date">
-  	<time datetime="2020-05-17T11:02:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="快速生成html骨架"><a href="#快速生成html骨架" class="headerlink" title="快速生成html骨架"></a>快速生成html骨架</h1><h2 id="简要介绍生成过程，主要来排坑"><a href="#简要介绍生成过程，主要来排坑" class="headerlink" title="简要介绍生成过程，主要来排坑"></a>简要介绍生成过程，<strong>主要来排坑</strong></h2><h3 id="1-自动生成"><a href="#1-自动生成" class="headerlink" title="1.自动生成"></a>1.自动生成</h3><p><strong>·</strong>如果你的sublime上安装了emmet这个插件，那么只需要输入<code>html:5</code>+table键，sublime就会自动为你生成html骨架。生成后的效果是这样的-&gt;&gt;</p>
-<p><img src="https://i.loli.net/2020/08/19/rkMzCJseDLxdQRq.jpg" alt="4.jpg"></p>
-        
-          <a class="article-more-a" href="/post/d6724731.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">html笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/html骨架//" class="article-tag-list-link color2">html骨架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/post/d6724731.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-c语言获取当前系统时间" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/post/1ca14816.html">c语言获取当前系统时间的不同用法</a>
-    </h1>
-  
-
-        
-        <a href="/post/1ca14816.html" class="archive-article-date">
-  	<time datetime="2020-05-16T03:00:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="C语言那些关于时间的程序"><a href="#C语言那些关于时间的程序" class="headerlink" title="C语言那些关于时间的程序"></a>C语言那些关于时间的程序</h1><h2 id="获取当前系统时间"><a href="#获取当前系统时间" class="headerlink" title="获取当前系统时间"></a>获取当前系统时间</h2><h3 id="用途一"><a href="#用途一" class="headerlink" title="用途一"></a>用途一</h3><p><strong>·</strong>需要对获取的当前的日期做出一些运算，不仅仅是输出显示。</p>
-        
-          <a class="article-more-a" href="/post/1ca14816.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/关于时间//" class="article-tag-list-link color5">关于时间</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/post/1ca14816.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/post/4d5d007a.html">我的第一篇blog</a>
-    </h1>
-  
-
-        
-        <a href="/post/4d5d007a.html" class="archive-article-date">
-  	<time datetime="2020-05-16T01:50:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="hexo建博客踩过的坑"><a href="#hexo建博客踩过的坑" class="headerlink" title="hexo建博客踩过的坑"></a>hexo建博客踩过的坑</h1><h2 id="找对教程"><a href="#找对教程" class="headerlink" title="找对教程"></a>找对教程</h2><p>Linux系统就找Linux搭博客的教程，Windows就找Windows的教程。当然每个教程后期修改博客的配置的方法可能不同，但是有的易出错，有的不易出错。搭博客后期可以看不同系统的教程。此处安利一下<strong>b站的codesheep</strong>博主的视频，windows系统记得开弹幕。</p>
-        
-          <a class="article-more-a" href="/post/4d5d007a.html#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo经验贴//" class="article-tag-list-link color3">hexo经验贴</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/post/4d5d007a.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -792,8 +374,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
