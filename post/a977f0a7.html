@@ -16,8 +16,10 @@
 <meta property="og:description" content="关于static(定义静态全局变量)C语言中的static123456789void fun()&amp;#123;	static int x&#x3D;0;	x++;	printf(&quot;%d&quot;,x);&amp;#125;int main()&amp;#123;	fun();	fun();	fun();">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/09/11/n8OYGzrmS1jvx42.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/09/15/XUx5JA6eWuVfRDB.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/09/15/1PA5TrSUV6D3L7q.jpg">
 <meta property="article:published_time" content="2020-09-10T04:42:17.000Z">
-<meta property="article:modified_time" content="2020-09-15T08:11:08.852Z">
+<meta property="article:modified_time" content="2020-09-15T08:15:14.209Z">
 <meta property="article:author" content="QiYao Shn">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -192,7 +194,10 @@
 
 
 <p><strong>·</strong>因为home这个类中的变量address、people、size都是被static修饰的静态局部变量，所以不论新建多少个home数组（类似于C语言中的结构体数组），数组中的成员的address、people、size的值都是不会改变且不能被改变的，都是100，200，300。如果一定要改，编译器会给出一个警告说 静态字段应以静态方式引用。 </p>
+<p><img src="https://i.loli.net/2020/09/15/XUx5JA6eWuVfRDB.jpg" alt="1.jpg"></p>
 <p>此时程序依然可以运行出结果。但home和home定义的a，b数组中的数据值会同时被改变，它们的address等变量会保持同一个值，无法再被赋予不同的值。（ps:被new修饰的是对象，会在堆区中申请一块内存，static是在全局区申请一块内存。）</p>
+<p>这是上面这段代码的运行结果：</p>
+<p><img src="https://i.loli.net/2020/09/15/1PA5TrSUV6D3L7q.jpg" alt="2.jpg"></p>
 <p>写在最后——初学Java，如果有不对的地方，望各位大佬能在我的GitHub放博客的仓库里评论一二，感激不尽！</p>
 
       
