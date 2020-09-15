@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://i.loli.net/2020/09/15/XUx5JA6eWuVfRDB.jpg">
 <meta property="og:image" content="https://i.loli.net/2020/09/15/1PA5TrSUV6D3L7q.jpg">
 <meta property="article:published_time" content="2020-09-10T04:42:17.000Z">
-<meta property="article:modified_time" content="2020-09-15T08:15:14.209Z">
+<meta property="article:modified_time" content="2020-09-15T09:20:08.927Z">
 <meta property="article:author" content="QiYao Shn">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -189,13 +189,14 @@
 <p><strong>·</strong>在Java中static不允许用来修饰局部变量，static变量是被对象所享有的，因此在myhome中的this.address的值是100。在myhome方法内部的address是局部变量，不可能与this关联，所以输出结果是100。在这里要记住一点：静态成员变量虽然独立于对象，但是不代表不可以通过对象去访问，<strong>所有的静态方法和静态变量都可以通过对象访问（只要访问权限足够）</strong>。 （参考博客：<a href="https://blog.csdn.net/qq_41457412/article/details/80598787" target="_blank" rel="noopener">java中static归纳总结</a>)</p>
 <p>这是上面这段代码的运行结果：</p>
 <p><img src="https://i.loli.net/2020/09/11/n8OYGzrmS1jvx42.jpg" alt="1.jpg"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> second;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">home</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span>  <span class="keyword">static</span> <span class="keyword">int</span> address=<span class="number">100</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> people=<span class="number">200</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> size=<span class="number">300</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		home[] a = <span class="keyword">new</span> home[<span class="number">3</span>];</span><br><span class="line">		home[] b = <span class="keyword">new</span> home[<span class="number">3</span>];</span><br><span class="line">		System.out.println(home.address);</span><br><span class="line">		a[<span class="number">0</span>]=<span class="keyword">new</span> home();</span><br><span class="line">		System.out.println(a[<span class="number">0</span>].address);</span><br><span class="line">		a[<span class="number">0</span>].address=<span class="number">12</span>;</span><br><span class="line">		System.out.println(a[<span class="number">0</span>].address);</span><br><span class="line">		System.out.println(a[<span class="number">1</span>].address);</span><br><span class="line">		b[<span class="number">1</span>].address=<span class="number">122</span>;</span><br><span class="line">		System.out.println(home.address);</span><br><span class="line">		System.out.println(b[<span class="number">1</span>].address);</span><br><span class="line">		System.out.println(a[<span class="number">1</span>].address);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> second;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">home</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> address=<span class="number">100</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> people=<span class="number">200</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> size=<span class="number">300</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		home[] a = <span class="keyword">new</span> home[<span class="number">3</span>];</span><br><span class="line">		home[] b = <span class="keyword">new</span> home[<span class="number">3</span>];</span><br><span class="line">		System.out.println(home.address);</span><br><span class="line">		a[<span class="number">0</span>]=<span class="keyword">new</span> home();</span><br><span class="line">		System.out.println(a[<span class="number">0</span>].address);</span><br><span class="line">		a[<span class="number">0</span>].address=<span class="number">12</span>;</span><br><span class="line">		System.out.println(a[<span class="number">0</span>].address);</span><br><span class="line">		System.out.println(a[<span class="number">1</span>].address);</span><br><span class="line">		b[<span class="number">1</span>].address=<span class="number">122</span>;</span><br><span class="line">		System.out.println(home.address);</span><br><span class="line">		System.out.println(b[<span class="number">1</span>].address);</span><br><span class="line">		System.out.println(a[<span class="number">1</span>].address);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <p><strong>·</strong>因为home这个类中的变量address、people、size都是被static修饰的静态局部变量，所以不论新建多少个home数组（类似于C语言中的结构体数组），数组中的成员的address、people、size的值都是不会改变且不能被改变的，都是100，200，300。如果一定要改，编译器会给出一个警告说 静态字段应以静态方式引用。 </p>
 <p><img src="https://i.loli.net/2020/09/15/XUx5JA6eWuVfRDB.jpg" alt="1.jpg"></p>
-<p>此时程序依然可以运行出结果。但home和home定义的a，b数组中的数据值会同时被改变，它们的address等变量会保持同一个值，无法再被赋予不同的值。（ps:被new修饰的是对象，会在堆区中申请一块内存，static是在全局区申请一块内存。）</p>
+<p>此时程序依然可以运行出结果。但home和home定义的a，b数组中的变量值会同时被改变，它们的address等变量会保持同一个值，因为它们是被static修饰的静态全局变量，无法再被赋予不同的值。（ps:被new修饰的是对象，会在堆区中申请一块内存，static是在全局区申请一块内存。）</p>
+<p>如果想要像C语言结构体数组一样为home定义的数组中的变量分别赋不同的值，只需把static删掉，再用new修饰这个数组成员，eg: a[0]=new home(); 就可以了。如果没有删掉static，只用new修饰，想要再申请一块内存来存放新的数组成员的变量值，此时home和home定义的a，b数组中的变量值依旧会同时被改变，因为该变量本质上依然是一个静态的变量。</p>
 <p>这是上面这段代码的运行结果：</p>
 <p><img src="https://i.loli.net/2020/09/15/1PA5TrSUV6D3L7q.jpg" alt="2.jpg"></p>
 <p>写在最后——初学Java，如果有不对的地方，望各位大佬能在我的GitHub放博客的仓库里评论一二，感激不尽！</p>
@@ -442,15 +443,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">c++</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color2">html笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -458,11 +459,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">html笔记</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>
